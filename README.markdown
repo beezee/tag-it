@@ -123,6 +123,15 @@ For example, the user can enter `John Smith` instead of `"John Smith"`.
 
 Defaults to *false*.
 
+### delimiterKeyCodes: (Array)
+
+KeyCodes to treat as tag delimiters during user input.
+E.g. for delimiting on semicolons:
+
+    $("#mytags").tagit({
+        delimiterKeyCodes: [56, 186]
+    });
+
 ### singleField (boolean)
 
 When enabled, will use a single hidden field for the form, rather than one per tag.
@@ -146,6 +155,45 @@ Defaults to *null*, unless Tag-it was created on an `input` element, in which ca
 Optionally set a *tabindex* attribute on the `input` that gets created for tag-it user input.
 
 Defaults to *null*
+
+### requireAutocomplete (boolean)
+
+When enabled, tags will only be created when selected from options presented
+by autocomplete.
+
+Defaults to *false*, and is ignored if neither **availableTags** or
+**tagSource** are defined.
+
+
+### hints (boolean)
+
+Display the content of the 'title' attribute as a hint inside the control,
+which will fade out on focus and return on blur (when no tags have been
+added).
+
+Defaults to *true*
+
+
+### hintHideEffect (String)
+
+The name of the jQuery UI effect to use when hiding hint text ('fade', 'fold',
+'scale', etc).
+
+Defaults to *"fade"*
+
+
+### hintHideEffectOptions (Object)
+
+An object containing key&value options for the hint hide effect.
+
+Defaults to *{}*
+
+
+### hintHideEffectSpeed (integer)
+
+The speed of the hint hide effect.
+
+Defaults to *200*
 
 
 ## Events
